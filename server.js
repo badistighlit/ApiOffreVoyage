@@ -22,7 +22,11 @@ app.get('/offres/:id', (req, res) => {
     } else {
         res.status(404).json({ message: `Offre avec l'ID ${offreId} non trouvée` }); 
     }})
+    app.get('/', (req, res) => {
 
+    return "Hello, l'api est up:"
+    }
+        )
 app.listen(port, () => {
     console.log(`Serveur en cours d'exécution sur le port ${port}`);
   });
